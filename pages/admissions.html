@@ -16,7 +16,7 @@
             <a href="" class="navbar">CURRICULUM</a>
             <a href="" class="navbar">GALLERY</a>
             <a href="admissions.html" class="navbar">ADMISSIONS</a>
-            <a href="" class="navbar">ALUMNI</a>
+            <a href="alumni.html" class="navbar">ALUMNI</a>
             <a href="" class="navbar">CONTACT US</a>
         </span>
     </nav>
@@ -43,7 +43,7 @@
                 <p><b>Phase 1:</b> 25th may - 30th june</p>
                 <p><b>Phase 2:</b> 02nd - 25th august</p>
                 <p><b>Phase 3:</b> 26th september - 06th october</p>
-                <button id="apply" class="disabled">Apply now</button>
+                <a id="admission"><button id="apply" class="disabled">Apply now</button></a>
                 <p><b>Time left to open admissions:</b></p>
                 <p id="timeLeft"></p>
             </div>
@@ -65,12 +65,14 @@
             let min = Math.floor((dif % (1000 * 60 * 60)) / (1000 * 60));
             let sec = Math.floor((dif % (1000 * 60)) / 1000);
             
-            document.querySelector("#timeLeft").innerHTML = `${days}DAYS ${hours}H ${min}MIN ${sec}S`
 
             if(dif <= 0){
-            document.querySelector("#apply").className = "button"
+                document.querySelector("#apply").className = "button"
+                document.querySelector("#timeLeft").innerHTML = `Admissions open`
+                document.querySelector("#admission").href = "https://domus.ipp.pt/home/cands/candidato/login.aspx"
             }else{
                 document.querySelector("#apply").className = "disabled"
+                document.querySelector("#timeLeft").innerHTML = `${days} days ${hours} h ${min} min ${sec} sec`
             }
             
         },1000)
