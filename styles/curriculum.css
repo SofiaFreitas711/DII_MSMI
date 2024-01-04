@@ -1,0 +1,133 @@
+body {
+    background-color: #333533;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+#logo {
+    width: 5vw;
+    height: 3vh;
+}
+
+a.navbar {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+a.navbar:hover {
+    color: #BA4E26
+}
+
+a.navbar:after {
+    color: white;
+    text-decoration: none;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #333533;
+    color: white;
+}
+
+.year-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.year {
+    width: 100px;
+    height: 0px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.05);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#divpad {
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+.semester {
+    margin-top: 2vw;
+}
+
+.unit {
+    color: #AD5531;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease
+}
+
+.unit:hover {
+    color: #a8a6a5;
+}
+
+.optional {
+    color: white;
+}
+
+.info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333533;
+    color: white;
+    text-transform: initial;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.info.visible {
+    display: block !important;
+}
+
+.info ul {
+    list-style: circle;
+    padding: 20px;
+}
+
+.info li {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    vertical-align: text-top;
+}
+
+.objectives {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
