@@ -4,15 +4,25 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* navbar style */
+
 nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 2vh;
+    background-color: #333533;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    position: sticky;
+    align-items: center;
+    top: 0px;
 }
 
 #logo {
+    padding-top: 2vh;
     width: 5vw;
     height: 3vh;
+    margin-bottom: 2.2vh;
+    align-content: baseline;
 }
 
 a.navbar {
@@ -30,7 +40,6 @@ a.navbar:after {
     color: white;
     text-decoration: none;
 }
-
 
 .row {
     display: flex;
@@ -154,7 +163,16 @@ a.icons:after {
     padding: 1vh;
 }
 
-#personImg{
-    /* width: 100%; */
+#headerImg-container {
+    width: 100%;
     height: 55vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#headerImg{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -250px;
 }
