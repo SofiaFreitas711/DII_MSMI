@@ -92,7 +92,6 @@ a.navbar:after {
     align-items: center;
     width: 100%;
     margin-top: 2vh;
-    position: absolute;
     bottom: 0;
 }
 
