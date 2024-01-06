@@ -33,35 +33,11 @@ a.navbar:after {
     text-decoration: none;
 }
 
-/* div */
-
-.row {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5vh;
-}
-
 .justify {
     width: 80%;
     padding: 2vw;
 }
 
-/* v1 for header */
-/* .intro {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    margin-top: 20px;
-}
-
-#project {
-    height: 55vh;
-    margin-right: 20px;
-} */
-
-/* v2 for header */
 #gallery {
     margin-top: 5vh;
     display: flex;
@@ -88,22 +64,12 @@ a.navbar:after {
 }
 
 .video-container {
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(640px, 1fr));
 }
 
 figure {
-    margin: 0 0 20px;
-    width: calc(50%-10px);
-    box-sizing: border-box;
-    width: 600px;
-}
-
-video {
-    width: calc(50%-10px);
-    /* border-radius: 8px; */
+    width: 640px;
 }
 
 .student-name {
@@ -114,9 +80,10 @@ video {
 .project-name {
     font-size: 18px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,14 +91,14 @@ video {
     margin-top: 2vh;
 }
 
-a.icons{
-    color:#999795;
+a.icons {
+    color: #999795;
     font-size: 24px;
     padding: 1vh;
 }
 
-a.icons:after{
-    color:#999795;
+a.icons:after {
+    color: #999795;
     font-size: 24px;
     padding: 1vh;
 }
