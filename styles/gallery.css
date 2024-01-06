@@ -15,6 +15,7 @@ nav {
     position: sticky;
     align-items: center;
     top: 0px;
+    z-index: 1;
 }
 
 #logo {

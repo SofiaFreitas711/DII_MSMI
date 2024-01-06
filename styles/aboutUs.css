@@ -15,6 +15,7 @@ nav{
     border-width: 0.5px;
     position: sticky;
     top: 0px;
+    z-index: 1;
 
 }
 
