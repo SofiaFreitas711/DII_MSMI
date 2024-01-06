@@ -115,3 +115,23 @@ video {
     font-size: 18px;
     font-weight: 600;
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+a.icons{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
+
+a.icons:after{
+    color:#999795;
+    font-size: 24px;
+    padding: 1vh;
+}
