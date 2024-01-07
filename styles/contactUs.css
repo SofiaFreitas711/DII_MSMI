@@ -18,6 +18,14 @@ nav{
 
 }
 
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
@@ -153,5 +161,24 @@ a.icons:after{
 
     #notification{
         margin-left: 4vw;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
     }
 }

@@ -19,6 +19,14 @@ nav{
 
 }
 
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
@@ -160,6 +168,7 @@ a.icons:after{
 }
 
 @media (max-width:700px){
+
     .row{
         flex-direction: column;
         margin-top: 0vh;
@@ -186,5 +195,24 @@ a.icons:after{
 
     #CTA{
         margin-top: 15%;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
     }
 }
