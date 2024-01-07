@@ -101,3 +101,16 @@ a.icons:after{
     font-size: 24px;
     padding: 1vh;
 }
+
+@media (max-width: 700px){
+    .testemony{
+        width: 80%;
+        background-size: cover;
+        padding: 2vh;
+    }
+
+    .image{
+        width: 30%;
+        height: 15%;
+    }
+}

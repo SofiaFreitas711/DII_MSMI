@@ -159,20 +159,32 @@ a.icons:after{
     padding: 1vh;
 }
 
-/* se quiser mudar a scrollbar
-::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 15px;
-  }
+@media (max-width:700px){
+    .row{
+        flex-direction: column;
+        margin-top: 0vh;
+    }
 
-::-webkit-scrollbar-track {
-    background: #585958; 
+    .justify{
+        width: 100%;
+        padding: 2px;
+    }
+
+    #presentation{
+        margin-bottom: 2vh;
+    }
+
+    #location{
+        width: 50%;
+        margin: auto;
+    }
+
+    #button{
+        width: 100%;
+        height: 15vh;
+    }
+
+    #CTA{
+        margin-top: 15%;
+    }
 }
-
-::-webkit-scrollbar-thumb {
-    background: #BA4E26; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #8d3718; 
-} */

@@ -136,3 +136,22 @@ a.icons:after{
     font-size: 24px;
     padding: 1vh;
 }
+
+@media(max-width:700px){
+    #form{
+        padding: 4vh;
+    }
+    textarea{
+        width: 25vh;
+        height: 25vh;
+    }
+
+    #container{
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    #notification{
+        margin-left: 4vw;
+    }
+}
