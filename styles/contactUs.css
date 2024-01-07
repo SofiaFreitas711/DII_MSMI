@@ -26,6 +26,10 @@ nav{
     display: none;
 }
 
+#hamburgerList{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
@@ -114,7 +118,6 @@ button:hover{
 
 span{
     color: #BA4E26;
-    font-weight: bold;
     margin-top: 1%;
 }
 
@@ -169,6 +172,10 @@ a.icons:after{
 
     #hamburger{
         display: flex;
+    }
+
+    #hamburgerList{
+        display: none;
     }
 
     #hamburgerList{

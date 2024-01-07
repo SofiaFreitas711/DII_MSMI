@@ -26,6 +26,10 @@ nav{
     display: none;
 }
 
+#hamburgerList{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
