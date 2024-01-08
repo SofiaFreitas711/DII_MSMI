@@ -6,24 +6,35 @@ body {
 
 /* navbar style */
 
-nav {
+nav{
     display: flex;
     justify-content: space-between;
     background-color: #333533;
+    padding-top: 2vh;
     border-bottom-style: solid;
     border-width: 0.5px;
     position: sticky;
-    align-items: center;
     top: 0px;
     z-index: 1;
+
 }
 
-#logo {
-    padding-top: 2vh;
+#menu {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburgerList {
+    display: none;
+}
+
+#logo{
     width: 5vw;
     height: 3vh;
-    margin-bottom: 2vh;
-    align-content: last baseline;
+    margin-bottom: 3vh;
 }
 
 a.navbar {
@@ -42,7 +53,6 @@ a.navbar:after {
     text-decoration: none;
 }
 
-
 #gallery {
     margin-top: 5vh;
     display: flex;
@@ -51,7 +61,7 @@ a.navbar:after {
     align-items: center;
 }
 
-#gallery-left {
+#gallery-word {
     text-transform: uppercase;
     align-items: center;
     color: rgba(255, 255, 255, 0.05);
@@ -59,18 +69,17 @@ a.navbar:after {
     font-weight: 700;
     text-align: left;
     vertical-align: top;
-
 }
 
-#text {
+#gallery-text {
     max-width: 70%;
     padding: 30px;
     vertical-align: text-top;
 }
 
-.video-container {
+.video-box {
     display: grid;
-    grid-template-columns: repeat(2, minmax(640px, 1fr));
+    grid-template-columns: repeat(2, minmax(700px, 1fr));
 }
 
 figure {
@@ -108,4 +117,43 @@ a.icons:after {
     color: #999795;
     font-size: 24px;
     padding: 1vh;
+}
+
+@media (max-width: 700px) {
+    #gallery {
+        flex-direction: column;
+    }
+
+    #gallery-word {
+        font-size: 80px;
+    }
+
+    #gallery-text{
+    padding: 20px;
+    }
+
+    .video-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
 }
