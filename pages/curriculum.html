@@ -34,7 +34,6 @@
             <a href="alumni.html" class="navbar">ALUMNI</a>
             <a href="contactUs.html" class="navbar">CONTACT US</a>
         </span>
-
     </nav>
 
     <div id="headerImg-box">
@@ -420,6 +419,7 @@
 
             let menu = document.querySelector("#hamburger")
 
+
             menu.addEventListener("click", function () {
                 if (menu.classList.toggle("active")) {
                     menu.classList.remove("active")
@@ -433,11 +433,26 @@
                     list.style.display = "none"
 
                 } else {
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
+
+                }else{
                     list.style.display = "flex"
                 }
 
             })
-        }); 
+         }); 
+                                               
     </script>
 
     <footer>
