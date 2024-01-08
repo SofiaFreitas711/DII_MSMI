@@ -78,8 +78,13 @@
         let btn = document.querySelector('button')
         btn.addEventListener('click', function(){
             let name = document.querySelector("#name").value;
-            if(name!=""){
+            let email = document.querySelector("#email").value;
+            let message = document.querySelector("#message").value
+            if(name!="" && email != "" && message!=""){
                 document.querySelector("#notification").innerHTML = `<p><i class="fa-regular fa-message"></i>  Thanks for the contact, ${name}. We will briefly get back to you!</p>`
+                document.querySelector("#notification").style = "border-radius: 15px; padding:2vh; margin-right:2vh"
+            }else{
+                document.querySelector("#notification").innerHTML = `<p>Please fill in all fields!</p>`
                 document.querySelector("#notification").style = "border-radius: 15px; padding:2vh; margin-right:2vh"
             }
             setTimeout(function(){
