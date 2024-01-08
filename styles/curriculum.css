@@ -42,6 +42,20 @@ a.navbar:after {
     text-decoration: none;
 }
 
+#headerImg-container {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#headerImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -250px;
+}
+
 .row {
     display: flex;
     justify-content: center;
@@ -87,7 +101,6 @@ a.navbar:after {
     text-transform: uppercase;
     transition: color 0.3s ease;
     margin-left: 20px;
-
 }
 
 .unit:hover {
@@ -110,7 +123,6 @@ a.navbar:after {
 .info.visible {
     display: grid !important;
     grid-template-columns: 200px auto;
-
 }
 
 .info ul {
@@ -144,6 +156,29 @@ a.navbar:after {
     letter-spacing: 1px;
 }
 
+@media (max-width: 700px) {
+    .unit-icon {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .info.visible {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .right {
+        align-items: left;
+    }
+
+    #headerImg {
+        margin-top: 0px;
+    }
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -164,18 +199,4 @@ a.icons:after {
     color: #999795;
     font-size: 24px;
     padding: 1vh;
-}
-
-#headerImg-container {
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
-    position: relative;
-}
-
-#headerImg{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: -250px;
 }
