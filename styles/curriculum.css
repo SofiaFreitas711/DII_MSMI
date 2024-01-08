@@ -18,6 +18,18 @@ nav {
     z-index: 1;
 }
 
+#menu {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburgerList {
+    display: none;
+}
+
 #logo {
     padding-top: 2vh;
     width: 5vw;
@@ -42,7 +54,7 @@ a.navbar:after {
     text-decoration: none;
 }
 
-#headerImg-container {
+#headerImg-box {
     width: 100%;
     height: 55vh;
     overflow: hidden;
@@ -52,20 +64,20 @@ a.navbar:after {
 #headerImg {
     width: 100%;
     height: auto;
-    display: block;
-    margin-top: -250px;
 }
 
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 10vh;
     background-color: #333533;
     color: white;
+    overflow: hidden;
 }
 
-.year-container {
+.year-row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,20 +92,14 @@ a.navbar:after {
     align-items: center;
     color: rgba(255, 255, 255, 0.05);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     text-align: center;
-}
-
-#divpad {
-    margin-top: 2vw;
-    margin-left: 2vw;
 }
 
 .semester {
     margin-top: 2vw;
     margin-left: 20px;
-
 }
 
 .unit {
@@ -123,6 +129,7 @@ a.navbar:after {
 .info.visible {
     display: grid !important;
     grid-template-columns: 200px auto;
+
 }
 
 .info ul {
@@ -156,29 +163,6 @@ a.navbar:after {
     letter-spacing: 1px;
 }
 
-@media (max-width: 700px) {
-    .unit-icon {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-
-    .info.visible {
-        display: flex !important;
-        flex-direction: column;
-    }
-
-    .right {
-        align-items: left;
-    }
-
-    #headerImg {
-        margin-top: 0px;
-    }
-}
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -199,4 +183,58 @@ a.icons:after {
     color: #999795;
     font-size: 24px;
     padding: 1vh;
+}
+
+@media (max-width: 700px) {
+    .unit-icon {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .info.visible {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .row {
+        height: 5vh;
+    }
+
+    .year {
+        margin: 10px;
+        font-size: 22px;
+    }
+
+    #headerImg-box {
+        height: 30vh;
+    }
+
+    #headerImg {
+        max-height: 40vh;
+        margin-top: 0px;
+    }
+
+    h1, h2{
+        font-size: smaller;
+    }
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
 }

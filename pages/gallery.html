@@ -14,7 +14,18 @@
 <body>
     <nav>
         <img src="../assets/logo.svg" alt="website logo" id="logo">
-        <span>
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
             <a href="home.html" class="navbar">HOME</a>
             <a href="aboutUs.html" class="navbar">ABOUT US</a>
             <a href="curriculum.html" class="navbar">CURRICULUM</a>
@@ -31,7 +42,7 @@
             from previous students of Interactive Systems and Media.</h3>
     </div>
 
-        <div class="video-container">
+        <div class="video-box">
             <figure>
                 <iframe width="640" height="360" frameborder="0"
                     src="https://mega.nz/embed/EENG1DKT#PIldWZKW0uh0zGy53WKLTU2bk2bByEg8TiLgLRQt9fA"
@@ -111,6 +122,29 @@
 
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let menu = document.querySelector("#hamburger")
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
+
+                }else{
+                    list.style.display = "flex"
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

@@ -31,6 +31,18 @@ nav {
     font-size: 26px;
 }
 
+#menu {
+    display: block;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburgerList {
+    display: none;
+}
+
 a.navbar {
     color: white;
     text-decoration: none;
@@ -52,7 +64,7 @@ a.navbar:after {
     padding: 19vw;
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 1vh;
+    margin-bottom: 10vh;
 }
 
 #esmad {
@@ -83,6 +95,24 @@ a.navbar:after {
     100% {
         color: white;
         opacity: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        top: 20px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #main {
+        display: flex;
+        padding: 19vw;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: x-small;
     }
 }
 

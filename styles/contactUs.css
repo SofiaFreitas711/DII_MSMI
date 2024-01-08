@@ -18,6 +18,18 @@ nav{
 
 }
 
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburgerList{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
@@ -106,7 +118,6 @@ button:hover{
 
 span{
     color: #BA4E26;
-    font-weight: bold;
     margin-top: 1%;
 }
 
@@ -135,4 +146,46 @@ a.icons:after{
     color:#999795;
     font-size: 24px;
     padding: 1vh;
+}
+
+@media(max-width:700px){
+    #form{
+        padding: 4vh;
+    }
+    textarea{
+        width: 25vh;
+        height: 25vh;
+    }
+
+    #container{
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    #notification{
+        margin-left: 4vw;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        display: none;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
 }

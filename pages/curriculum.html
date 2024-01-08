@@ -14,7 +14,18 @@
 <body>
     <nav>
         <img src="../assets/logo.svg" alt="website logo" id="logo">
-        <span>
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
             <a href="home.html" class="navbar">HOME</a>
             <a href="aboutUs.html" class="navbar">ABOUT US</a>
             <a href="curriculum.html" class="navbar">CURRICULUM</a>
@@ -23,15 +34,16 @@
             <a href="alumni.html" class="navbar">ALUMNI</a>
             <a href="contactUs.html" class="navbar">CONTACT US</a>
         </span>
+
     </nav>
 
-    <div id="headerImg-container">
+    <div id="headerImg-box">
         <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="prototyping." id="headerImg"></img>
     </div>
 
     <div class="row">
-        <div class="year-container">
+        <div class="year-row">
             <div class="year">YEAR 1</div>
             <div class="year">YEAR 1</div>
             <div class="year">YEAR 1</div>
@@ -64,13 +76,14 @@
                         <li>Explore the history, applications, and technologies of Human-Computer Interaction (HCI).
                         </li>
                         <li>Foster creativity and innovation in designing and prototyping interfaces and interaction
-                            models,
-                            emphasizing both graphic and natural dimensions.</li>
+                            models, emphasizing both graphic and natural dimensions.</li>
                         <li>Apply diverse navigation, content architecture (wireframing), and interaction techniques in
-                            Web
-                            User Interfaces (WUIs).</li>
+                            Web User Interfaces (WUIs).</li>
                         <li>Utilize computer vision and physical computing techniques to enhance interface design.</li>
                     </ul>
+                    <p>Embark on a journey where creativity meets technology, transforming your ability to craft
+                        engaging
+                        and innovative digital experiences.</p>
                 </div>
             </div>
         </h2>
@@ -91,6 +104,9 @@
                         <li>Create innovative projects that intricately explore the fusion of sound and image, fostering
                             a dynamic and engaging multimedia experience.</li>
                     </ul>
+                    <p>
+                        Join us in shaping a future where sound and image converge to create immersive experiences.
+                    </p>
                 </div>
             </div>
         </h2>
@@ -133,8 +149,6 @@
                             control structures, and functions.</li>
                         <li>Cultivate creative and critical skills to construct simple, direct, and effective solutions.
                         </li>
-                        <li>Integrate creative programming languages as a means of artistic expression and implement
-                            programs using open-source integrated development environments.</li>
                     </ul>
                 </div>
             </div>
@@ -171,8 +185,7 @@
                             within 3D applications. </li>
                         <li>
                             Grasp the unique demands of character development in diverse contexts, including
-                            cinematographic
-                            animation, video games, and multimedia products.
+                            cinematographic animation, video games, and multimedia products.
                         </li>
                     </ul>
                 </div>
@@ -239,6 +252,7 @@
                         <li>Apply the skills aqcuired on the development of practical projects</li>
                     </ul>
                 </div>
+
         </h2>
 
         <h2 class="unit">
@@ -257,6 +271,7 @@
                         <li>Design and develop systems for enhanced user experiences. </li>
                     </ul>
                 </div>
+
         </h2>
 
         <h2 class="unit">
@@ -301,7 +316,7 @@
 
     </div>
     <div class="row">
-        <div class="year-container">
+        <div class="year-row">
             <div class="year">YEAR 2</div>
             <div class="year">YEAR 2</div>
             <div class="year">YEAR 2</div>
@@ -363,8 +378,7 @@
                         <li>Cultivate research capabilities and critical thinking to proficiently prepare and write
                             scientific articles in the area of interactive media and systems. </li>
                         <li>Enhance oral and written communication skills for presenting and discussing research
-                            findings
-                            within various multimedia domains. </li>
+                            findings within various multimedia domains. </li>
                         <li>Gain a deep understanding of the current state of research in the chosen area, enabling the
                             production of theoretically informed articles in multimedia. </li>
                     </ul>
@@ -383,12 +397,10 @@
                         <li>Cultivate the ability to critically analyze and reason about personal opinions within the
                             diverse environments of the web. </li>
                         <li>Acknowledge and value the significance of scientific and professional updates obtained
-                            through
-                            exposure to relevant projects and studies in the field. </li>
+                            through exposure to relevant projects and studies in the field. </li>
                         <li>Demonstrate proficiency in written critical analysis, engaging in the critical discussion of
                             research results, and actively promoting contact with innovative projects within the
-                            thematic
-                            scope of the course.
+                            thematic scope of the module.
                         </li>
                     </ul>
                 </div>
@@ -405,7 +417,27 @@
                     info.classList.toggle('visible');
                 });
             });
-        });
+
+            let menu = document.querySelector("#hamburger")
+
+            menu.addEventListener("click", function () {
+                if (menu.classList.toggle("active")) {
+                    menu.classList.remove("active")
+                } else {
+                    menu.classList.toggle("active")
+                }
+
+                let list = menu.nextElementSibling
+
+                if (list.style.display == "flex") {
+                    list.style.display = "none"
+
+                } else {
+                    list.style.display = "flex"
+                }
+
+            })
+        }); 
     </script>
 
     <footer>

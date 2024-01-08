@@ -17,6 +17,18 @@ nav{
     top: 0px;
 }
 
+#menu{
+    display: block;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburgerList{
+    display: none;
+}
+
 #logo{
     width: 5vw;
     height: 3vh;
@@ -39,7 +51,7 @@ a.navbar:after{
     text-decoration: none;
 }
 
-.row{
+.container{
     display: flex;
     flex-direction: row;
     margin-top: 5vh;
@@ -127,4 +139,44 @@ a.icons:after{
     color:#999795;
     font-size: 24px;
     padding: 1vh;
+}
+
+@media(max-width: 700px){
+    .container{
+        flex-direction: column;
+    }
+
+    button{
+        font-size: 12px;
+        width: 70%;
+        
+    }
+
+    button:hover{
+        background-color: #953c1b;
+        color: white;
+        border-radius: 10px;
+        height: 5vh;
+        width: 70%;
+        border: none;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #hamburger{
+        display: flex;
+    }
+
+    #hamburgerList{
+        flex-direction: column;
+        background-color: #333533;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        font-size: x-large;
+        width: 100%;
+        line-height: 1.4;
+    }
 }

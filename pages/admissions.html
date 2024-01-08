@@ -14,7 +14,18 @@
 <body>
     <nav>
         <img src="../assets/logo.svg" alt="website logo" id="logo">
-        <span>
+        <span><i class="fa-solid fa-bars" id="hamburger"></i>
+            <div id="hamburgerList">
+                <a href="home.html" class="navbar">HOME</a>
+                <a href="aboutUs.html" class="navbar">ABOUT US</a>
+                <a href="curriculum.html" class="navbar">CURRICULUM</a>
+                <a href="gallery.html" class="navbar">GALLERY</a>
+                <a href="admissions.html" class="navbar">ADMISSIONS</a>
+                <a href="alumni.html" class="navbar">ALUMNI</a>
+                <a href="contactUs.html" class="navbar">CONTACT US</a>
+            </div>
+        </span>
+        <span id="menu">
             <a href="home.html" class="navbar">HOME</a>
             <a href="aboutUs.html" class="navbar">ABOUT US</a>
             <a href="curriculum.html" class="navbar">CURRICULUM</a>
@@ -23,8 +34,9 @@
             <a href="alumni.html" class="navbar">ALUMNI</a>
             <a href="contactUs.html" class="navbar">CONTACT US</a>
         </span>
+        
     </nav>
-    <div class="row">
+    <div class="container">
         <div id="left">
             <h1>FAQ's</h1>
             <div id="faqs">
@@ -128,21 +140,30 @@
                     }
                 })
             }
-            // for(const question of questions){
-            //     question.addEventListener("click", function(){
 
-            //         let answer = this.nextElementSibling
+            let menu = document.querySelector("#hamburger")
+                
+            menu.addEventListener("click", function(){
+                if(menu.classList.toggle("active")){
+                    menu.classList.remove("active")
+                }else{
+                    menu.classList.toggle("active")
+                }
+                
+                let list = menu.nextElementSibling
+                
+                if(list.style.display == "flex"){
+                    list.style.display = "none"
 
-            //         if(answer.style.display === "block"){
-            //             anser.style.display = "none"
-            //         }else{
-            //             anser.style.display = "block"
-            //         }
-            //     })
+                }else{
+                    list.style.display = "flex"
+                }
 
-            // }
+            })
+            
 
         })
+
 
     </script>
 </body>
